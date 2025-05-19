@@ -1,0 +1,83 @@
+/* Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+}
+
+/* Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+/* Add accessible line-height and improved text rendering */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Imporove media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+header {
+	height: 75px;
+	margin-bottom: 16px;
+}
+
+nav {
+	padding: 8px;
+	text-align: center;
+}
+
+button {
+	background-color: darkorange;
+	border-radius: 4px;
+	border-style: none;
+}
