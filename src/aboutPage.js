@@ -1,3 +1,5 @@
+import { logger } from './logger'
+
 class AboutPage {
 	constructor() {
 		this.containerId = 'content'
@@ -14,7 +16,7 @@ class AboutPage {
 		const container = document.getElementById(this.containerId)
 
 		if (!container) {
-			console.error(
+			logger.log(
 				`Container with ID '${this.containerId}' not found in the DOM.`
 			)
 			return

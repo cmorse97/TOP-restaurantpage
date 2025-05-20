@@ -25,13 +25,3 @@ navBtn.forEach(btn => {
 		}
 	})
 })
-
-// class Page {
-// 	constructor(page) {
-// 		this.page = page
-// 	}
-
-// 	loadPage(page) {
-// 		const pageID = page.dataset.page
-// 	}
-// }
