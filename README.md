@@ -54,7 +54,7 @@ The project is organized with the following key files and directories:
     ```
 3.  **Build the project with Webpack:**
     ```bash
-    npx webpack serve
+    npm run build
     ```
     This command will use the `webpack.config.js` file to bundle your JavaScript modules into `dist/main.js`.
 4.  **Open `dist/index.html`** in your web browser.
