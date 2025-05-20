@@ -68,32 +68,76 @@ h6 {
 
 header {
 	height: 75px;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
+	border-bottom: 1px solid grey;
+	background-color: antiquewhite;
 }
 
 nav {
-	padding: 8px;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	height: 100%;
 }
 
 button {
 	background-color: darkorange;
+	padding: 8px 16px 8px 16px;
 	border-radius: 4px;
 	border-style: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
 }
 
-.home-container.hidden {
-	display: none;
+ul {
+	padding: 0 16px 0 16px;
 }
 
-.menu-container.hidden {
-	display: none;
+li {
+	list-style: none;
 }
 
-.menu-container {
-	margin: 8px;
+.home-page {
+	text-align: center;
+}
+
+.home-page h1 {
+	margin-bottom: 8px;
+}
+
+.home-page p {
+	margin-top: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.menu-page h1 {
+	text-align: center;
+	margin-bottom: 8px;
 }
 
 .menu-item {
 	margin-bottom: 8px;
+}
+
+.menu-item span {
+	font-style: italic;
+}
+
+.menu-item h4 {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+.about-page {
+	text-align: center;
+}
+
+.about-page h1 {
+	margin-bottom: 8px;
+}
+
+.about-page p {
+	padding: 0 16px 0 16px;
 }

@@ -54,14 +54,66 @@ menu.addMenuItem(cheeseBurger)
 menu.addMenuItem(chickenStrips)
 menu.addMenuItem(chickenSandwich)
 
-menu.getMenu().forEach(item => {
-	const div = document.createElement('div')
-	div.classList.add('menu-item')
+// menu.getMenu().forEach(item => {
+// 	const div = document.createElement('div')
+// 	div.classList.add('menu-item')
 
-	div.innerHTML = item.info
+// 	div.innerHTML = item.info
 
-	menuContainer.appendChild(div)
-})
+// 	menuContainer.appendChild(div)
+// })
 
-console.log(menuContainer)
-export { menuContainer }
+class MenuPage {
+	constructor() {
+		this.containerId = 'content'
+		this.title = 'Menu'
+	}
+
+	setContainerId(id) {
+		this.containerId = id
+	}
+
+	render() {
+		const container = document.getElementById(this.containerId)
+
+		if (!container) {
+			console.error(
+				`Container with ID '${this.containerId}' not found in the DOM.`
+			)
+			return
+		}
+
+		const div = document.createElement('div')
+		div.classList.add('menu-page')
+
+		const heading = document.createElement('h1')
+		heading.textContent = this.title
+
+		const menuList = document.createElement('ul')
+		menuList.classList.add('menu')
+
+		menu.getMenu().forEach(item => {
+			const menuItem = document.createElement('li')
+			menuItem.classList.add('menu-item')
+
+			menuItem.innerHTML = item.info
+
+			menuList.appendChild(menuItem)
+		})
+
+		div.appendChild(heading)
+		div.appendChild(menuList)
+
+		container.innerHTML = ''
+		container.appendChild(div)
+	}
+
+	hide() {
+		const container = document.getElementById(this.containerId)
+		container.innerHTML = ''
+	}
+}
+
+const menuPage = new MenuPage()
+
+export { menuPage }

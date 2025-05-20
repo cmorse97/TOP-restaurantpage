@@ -1,27 +1,37 @@
-console.log('Hello from index.js')
-
 import './styles.css'
-import { homeContainer } from './homePage.js'
-import { menuContainer } from './menuPage.js'
+import { homePage } from './homePage.js'
+import { menuPage } from './menuPage.js'
+import { aboutPage } from './aboutPage.js'
 
-const content = document.getElementById('content')
 const navBtn = document.querySelectorAll('button.nav-btn')
-menuContainer.classList.add('hidden')
 
 navBtn.forEach(btn => {
 	const btnId = btn.dataset.page
 	btn.addEventListener('click', () => {
-		console.log(`Clicked ${btnId}`)
 		if (btnId === 'menu') {
-			homeContainer.classList.add('hidden')
-			menuContainer.classList.remove('hidden')
+			homePage.hide()
+			aboutPage.hide()
+			menuPage.render()
 		}
 		if (btnId === 'home') {
-			menuContainer.classList.add('hidden')
-			homeContainer.classList.remove('hidden')
+			menuPage.hide()
+			aboutPage.hide()
+			homePage.render()
+		}
+		if (btnId === 'about') {
+			homePage.hide()
+			menuPage.hide()
+			aboutPage.render()
 		}
 	})
 })
 
-content.appendChild(homeContainer)
-content.appendChild(menuContainer)
+// class Page {
+// 	constructor(page) {
+// 		this.page = page
+// 	}
+
+// 	loadPage(page) {
+// 		const pageID = page.dataset.page
+// 	}
+// }
