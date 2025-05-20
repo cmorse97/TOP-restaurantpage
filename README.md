@@ -17,7 +17,7 @@ This project demonstrates the use of Webpack to manage and bundle assets, as wel
 
 The project is organized with the following key files and directories:
 
-````
+```
 ├── dist/
 │ └── main.js # Bundled JavaScript output by Webpack
 │ └── index.html # Main HTML file
@@ -30,7 +30,8 @@ The project is organized with the following key files and directories:
 ├── webpack.config.js # Webpack configuration file
 ├── package.json # Node.js package manifest (for dependencies and scripts)
 ├── package-lock.json # Records the exact versions of dependencies
-└── README.md # Project documentation (this file)```
+└── README.md # Project documentation (this file)
+```
 
 ## Key Concepts Demonstrated
 
@@ -90,4 +91,7 @@ This project successfully demonstrates:
 ## Author
 
 Caleb Morse
-````
+
+```
+
+```
