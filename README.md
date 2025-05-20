@@ -20,12 +20,13 @@ The project is organized with the following key files and directories:
 ```
 ├── dist/
 │ └── main.js # Bundled JavaScript output by Webpack
-│ └── index.html # Main HTML file
+│ └── index.html # Bundled HTML output by Webpack
 ├── src/
+│ ├── index.html # Main HTML file
 │ ├── index.js # Main entry point for JavaScript, handles page switching logic
-│ ├── home.js # JavaScript module for rendering the Home page content (class-based)
-│ ├── menu.js # JavaScript module for rendering the Menu page content (class-based)
-│ └── about.js # JavaScript module for rendering the About page content (class-based)
+│ ├── homePage.js # JavaScript module for rendering the Home page content (class-based)
+│ ├── menuPage.js # JavaScript module for rendering the Menu page content (class-based)
+│ └── aboutPage.js # JavaScript module for rendering the About page content (class-based)
 │ └── style.css # Main CSS file (may be bundled by Webpack)
 ├── webpack.config.js # Webpack configuration file
 ├── package.json # Node.js package manifest (for dependencies and scripts)
